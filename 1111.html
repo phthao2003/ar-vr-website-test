@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang web bán giày với AR</title>
+    <!-- Thêm các tệp CSS của AR.js và A-Frame -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ar.js@2.2.4/assets/css/style.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+    <!-- Đối tượng AR sẽ được hiển thị tại đây -->
+    <div id="ar-container">
+        <a-scene embedded arjs>
+            <!-- Thêm marker AR -->
+            <a-marker type="pattern" url="https://raw.githubusercontent.com/jeromeetienne/AR.js/master/three.js/examples/marker-training/examples/pattern-files/pattern-hiro.patt">
+                <!-- Tạo đối tượng AR cho giày -->
+                <a-box position="0 0.5 0" color="blue" scale="0.5 0.5 0.5"></a-box>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </div>
+</body>
+</html>
